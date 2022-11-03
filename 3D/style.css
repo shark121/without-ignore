@@ -1,0 +1,277 @@
+@font-face{
+
+  font-family:"ubuntu";
+  src:url("textures/Ubuntu-Bold.ttf")
+}
+
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body
+{
+  font-family: 'ubuntu';
+ /* color: #635bff;*/
+ padding-left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+
+
+.container{
+position: absolute;
+height: 170vh;
+width: 100vw;
+padding-right: 2rem;
+
+
+
+
+}
+
+#canvas{
+  position: absolute;
+
+}
+
+
+.text1{
+  height: 70vh;
+  width : 100vw;
+  padding: 4rem;
+  background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.heading{
+font-size: 4rem;
+height: 20vh;
+width: 20vw;
+}
+
+.text2,.text3{
+  height: 40vh;
+  width: 100vw;
+  /*background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+
+  margin: 1rem 0 0 0;
+}
+
+
+.text2{
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0rem;
+  align-items: center;
+  background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  color: white;
+  border-radius: 3rem;
+  padding-right: 2rem;
+}
+
+
+.text3{
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+:root {
+--dark-color: #635bff;
+--light-color: #80e9ff;
+}
+
+svg {
+cursor: pointer;
+}
+
+#darkGroup {
+fill: var(--dark-color);
+}
+#lightGroup {
+fill: var(--light-color);
+}
+#dark1,
+#light1,
+#dark2 {
+transition: all 1s ease;
+}
+#dark2 {
+transform: translateX(-100%);
+}
+svg:hover #light1 {
+transform: translateX(20%);
+}
+svg:hover #dark1 {
+transform: translateX(40%);
+opacity: 0;
+}
+svg:hover #dark2 {
+transform: translateX(0%);
+}
+
+
+.box1, .box2,.box3{
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+}
+
+.box1{
+}
+.box2{
+}
+.box3{
+}
+
+.text2::before{
+      content: " ";
+      width:100vw;
+      height: 5px;
+      border-radius: 2px;
+      /*background-color: rgb(230, 28, 62);*/
+      background-image: linear-gradient(90deg, red, orange , yellow);
+      position: absolute;
+      bottom: 0;
+      left: auto;
+      right: auto;
+      transition-duration:1000ms;
+      transition-timing-function:ease ;
+      transition-delay: 200ms;
+      transition-property: all ;
+      transform: scale(0);
+}
+/*     
+.text2:hover::before{
+      transform: scaleX(8);
+      transform: scaleY(1);
+    }
+*/    
+.body1, .body2 , .body3{
+  height: 16rem;
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+
+}
+.heading1,.heading2,.heading3{
+font-weight: 300;
+font-size: 2rem;
+}
+.reveal{
+position: relative;
+transform: translateY(150px);
+opacity: 0;
+transition: 1s all ease;
+}
+
+.reveal.active{
+transform: translateY(0);
+opacity: 1;
+}
+
+.details{
+font-size: 1.5rem;
+font-weight: 500;
+padding-right: 5rem;
+background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+::-webkit-scrollbar {
+width: 1em;
+height: 1em;
+background: none;
+}
+
+::-webkit-scrollbar-track {
+background: rgba(236, 233, 233, 0.5);
+border-radius: 100vw;
+width: 1rem;
+background: none;
+
+}
+
+::-webkit-scrollbar-thumb {
+background-image: linear-gradient( rgba(131,58,180,1) 0%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%);
+border-radius: 100vw;
+}
+
+
+
+/* Vertical scrolling 
+
+
+
+
+.left1{
+padding-top: 3.5rem ;
+position: absolute;
+left: 0;   
+height: 50%;
+width: 50%;
+background-color: white;
+
+
+}
+
+
+
+/*
+
+
+
+
+@keyframes divtransition{
+  0% {
+      opacity:0;
+  }
+  50% {
+  }
+  100% {
+       opacity :1;
+  }
+}
+
+#yourTargetElement{
+  animation: divtransition .6s linear 0s 1 normal none;}
+
+
+
+.left, .center, .right{
+     height: 20px;
+     width: 20px;
+}
+
+.left{
+  background-color: red;
+}
+.center{
+  background-color: blue;
+}
+.right{
+  background-color: green;
+}*/
